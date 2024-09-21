@@ -1,30 +1,55 @@
 ---
 layout: default
 ---
-<link href="/css/override.css" rel="stylesheet" type="text/css">
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
+<!-- SEO Meta Tags -->
+<meta name="description" content="{{ page.description | default: 'A blog post about ' | append: page.title | escape }}">
+<meta name="keywords" content="Blog, {{ page.title | escape }}, {{ site.author | escape }}, {{ site.keywords | join: ', ' }}">
+
+<!-- Link to Custom CSS -->
+<link href="/css/override.css" rel="stylesheet" type="text/css">
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  
+  <!-- Post Header -->
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <h1 class="post-title p-name" itemprop="headline">{{ page.title | escape }}</h1>
+    
+    <!-- Post Metadata -->
     <p class="post-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
       </time>
+
+      <!-- Author Info -->
       {% assign author = page.author | default: site.author %}
       {%- if author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-      {%- endif -%}</p>
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span class="p-author h-card" itemprop="name">{{ author }}</span>
+        </span>
+      {%- endif -%}
+      
+      <!-- Category (if applicable) -->
+      {%- if page.category -%}
+        • <span class="post-category">{{ page.category | escape }}</span>
+      {%- endif -%}
+    </p>
   </header>
 
-  <div class="share-links">
+  <!-- Social Share Links -->
+  <div class="share-links" aria-label="Share this post">
     {% include sharelinks.html %}
   </div>
 
+  <!-- Post Content -->
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
+    
+    <!-- Navigation Links -->
     {% include navlinks.html %}
   </div>
 
+  <!-- Hidden URL for SEO -->
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
