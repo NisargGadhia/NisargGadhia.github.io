@@ -1,51 +1,74 @@
+/* Custom T-SQL style with a modern, vibrant theme */
+
 .hljs.language-tsql {
-    display: block;
-    overflow-x: auto;
-    padding: 0.5em;
-    background: white;
-    color: #808080;
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+  background: #2d2d2d;
+  color: #eee;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease-in-out;
 }
 
+.hljs.language-tsql:hover {
+  background: #1a1a1a;
+}
+
+/* Keywords */
 .language-tsql .hljs-keyword {
-    color: #0000ff;
-    font-weight: normal;
+  color: #ffcb6b;
+  font-weight: bold;
 }
 
+/* Built-in functions */
 .language-tsql .hljs-built_in {
-    color: #ff00ff;
+  color: #c792ea;
+  font-weight: bold;
 }
 
+/* Data types */
 .language-tsql .hljs-type {
-    color: #008000;
-    font-weight: normal;
+  color: #82aaff;
+  font-weight: bold;
 }
 
+/* Functions */
 .language-tsql .hljs-function {
-    color: #800000;
+  color: #ff5370;
+  font-weight: bold;
 }
 
+/* Numbers */
 .language-tsql .hljs-number {
-    color: #000000;
+  color: #ffcb6b;
 }
 
+/* Strings */
 .language-tsql .hljs-string {
-    color: #ff0000;
+  color: #c3e88d;
 }
 
+/* Symbols */
 .language-tsql .hljs-symbol {
-    color: #000000;
+  color: #89ddff;
 }
 
+/* Comments */
 .language-tsql .hljs-comment {
-    color: #008000;
-    font-style: normal;
+  color: #757575;
+  font-style: italic;
 }
 
+/* Meta data (background and text color) */
 .language-tsql .hljs-meta {
-    background: #cdcdcd;
-    color: #000000;
+  background: #444444;
+  color: #ffcb6b;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
 }
 
+/* Literals */
 .language-tsql .hljs-literal {
-    color: #808080;
+  color: #82aaff;
 }
