@@ -1,28 +1,34 @@
-/*
+/* Custom highlight.js style with vibrant colors and effects */
 
-Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
-
-*/
-
+/* Main container styling */
 .hljs {
   display: block;
   overflow-x: auto;
-  padding: 0.5em;
-  background: #F0F0F0;
+  padding: 1em;
+  background: #2d2d2d;
+  color: #eee;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease-in-out;
 }
 
+.hljs:hover {
+  background: #1a1a1a;
+}
 
-/* Base color: saturation 0; */
-
+/* Base text color */
 .hljs,
 .hljs-subst {
-  color: #444;
+  color: #e0e0e0;
 }
 
+/* Comments */
 .hljs-comment {
-  color: #888888;
+  color: #757575;
+  font-style: italic;
 }
 
+/* Bold keywords and tags */
 .hljs-keyword,
 .hljs-attribute,
 .hljs-selector-tag,
@@ -30,11 +36,10 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 .hljs-doctag,
 .hljs-name {
   font-weight: bold;
+  color: #ff9d00;
 }
 
-
-/* User color: hue: 0 */
-
+/* Strings, numbers, and IDs */
 .hljs-type,
 .hljs-string,
 .hljs-number,
@@ -43,15 +48,18 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 .hljs-quote,
 .hljs-template-tag,
 .hljs-deletion {
-  color: #880000;
+  color: #ff5370;
 }
 
+/* Titles and sections */
 .hljs-title,
 .hljs-section {
-  color: #880000;
+  color: #c792ea;
   font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* RegExps, symbols, variables */
 .hljs-regexp,
 .hljs-symbol,
 .hljs-variable,
@@ -59,41 +67,38 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 .hljs-link,
 .hljs-selector-attr,
 .hljs-selector-pseudo {
-  color: #BC6060;
+  color: #89ddff;
 }
 
-
-/* Language color: hue: 90; */
-
+/* Literals (booleans, constants) */
 .hljs-literal {
-  color: #78A960;
+  color: #c3e88d;
 }
 
+/* Built-in elements */
 .hljs-built_in,
 .hljs-bullet,
 .hljs-code,
 .hljs-addition {
-  color: #397300;
+  color: #82aaff;
 }
 
-
-/* Meta color: hue: 200 */
-
+/* Meta information */
 .hljs-meta {
-  color: #1f7199;
+  color: #80cbc4;
 }
 
 .hljs-meta-string {
-  color: #4d99bf;
+  color: #4ec9b0;
 }
 
-
-/* Misc effects */
-
+/* Emphasis and strong text */
 .hljs-emphasis {
   font-style: italic;
+  color: #f78c6c;
 }
 
 .hljs-strong {
   font-weight: bold;
+  color: #ffcb6b;
 }
