@@ -77,4 +77,54 @@ main {
 
 .posts h2 {
     font-size: 1.5rem;
-    margin-bottom: 15px;
+    margin-bottom: 15px;}
+
+article {
+    margin-bottom: 20px;
+}
+
+article h3 a {
+    font-size: 1.4rem;
+    color: #333;
+    text-decoration: none;
+}
+
+article h3 a:hover {
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+article p {
+    margin-top: 5px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .intro p, .posts article p {
+        font-size: 1rem;
+    }
+}
+
