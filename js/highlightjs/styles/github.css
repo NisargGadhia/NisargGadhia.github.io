@@ -1,99 +1,116 @@
-/*
+/* Custom github.com style with a vibrant modern theme */
 
-github.com style (c) Vasily Polovnyov <vast@whiteants.net>
-
-*/
-
+/* Main container styling */
 .hljs {
   display: block;
   overflow-x: auto;
-  padding: 0.5em;
-  color: #333;
-  background: #f8f8f8;
+  padding: 1em;
+  background: #2d2d2d;
+  color: #eee;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease-in-out;
 }
 
+.hljs:hover {
+  background: #1a1a1a;
+}
+
+/* Comment and quotes styling */
 .hljs-comment,
 .hljs-quote {
-  color: #998;
+  color: #757575;
   font-style: italic;
 }
 
+/* Keywords, selectors, and bold elements */
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-subst {
-  color: #333;
+  color: #ff9d00;
   font-weight: bold;
 }
 
+/* Numbers, literals, variables, and template variables */
 .hljs-number,
 .hljs-literal,
 .hljs-variable,
 .hljs-template-variable,
 .hljs-tag .hljs-attr {
-  color: #008080;
+  color: #82aaff;
 }
 
+/* Strings and doctags */
 .hljs-string,
 .hljs-doctag {
-  color: #d14;
+  color: #ff5370;
 }
 
+/* Titles, sections, and ID selectors */
 .hljs-title,
 .hljs-section,
 .hljs-selector-id {
-  color: #900;
+  color: #c792ea;
   font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
-.hljs-subst {
-  font-weight: normal;
-}
-
+/* Type and class titles */
 .hljs-type,
 .hljs-class .hljs-title {
-  color: #458;
+  color: #82aaff;
   font-weight: bold;
 }
 
+/* Tags, names, and attributes */
 .hljs-tag,
 .hljs-name,
 .hljs-attribute {
-  color: #000080;
-  font-weight: normal;
+  color: #c3e88d;
 }
 
+/* RegExps and links */
 .hljs-regexp,
 .hljs-link {
-  color: #009926;
+  color: #89ddff;
 }
 
+/* Symbols and bullets */
 .hljs-symbol,
 .hljs-bullet {
-  color: #990073;
+  color: #f78c6c;
 }
 
+/* Built-in elements and built-in names */
 .hljs-built_in,
 .hljs-builtin-name {
-  color: #0086b3;
+  color: #ffcb6b;
 }
 
+/* Meta information */
 .hljs-meta {
-  color: #999;
+  color: #80cbc4;
   font-weight: bold;
 }
 
+/* Additions and deletions */
 .hljs-deletion {
-  background: #fdd;
+  background: #ff5370;
+  color: #fff;
 }
 
 .hljs-addition {
-  background: #dfd;
+  background: #82aaff;
+  color: #fff;
 }
 
+/* Emphasis and strong elements */
 .hljs-emphasis {
   font-style: italic;
+  color: #f78c6c;
 }
 
 .hljs-strong {
   font-weight: bold;
+  color: #ffcb6b;
 }
